@@ -46,6 +46,11 @@
    switch-window ; takes over C-x o
    auto-complete
    emmet-mode
+   org-mode
+   helm
+   powerline
+   markdown-mode
+   web-mode
    projectile
    color-theme               
    color-theme-tomorrow))
@@ -63,3 +68,14 @@
 (el-get 'sync my:el-get-packages)
 
 (color-theme-tomorrow-night)
+(powerline-vim-theme)
+
+(when (eq system-type 'darwin)
+  (set-face-attribute 'default nil :family "Hack"))
+
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+
+
+
+
